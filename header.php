@@ -44,7 +44,12 @@
                     </h1>
                 </div>
 
-                <nav class="flex items-center space-x-6">
+                <div class="hamburger">
+                    <span class="slice"></span>
+                    <span class="slice"></span>
+                    <span class="slice"></span>
+                </div>
+                <nav class="flex items-center space-x-6" id="main-navigation">
                     <?php
                     wp_nav_menu(array(
                         'theme_location' => 'primary',
