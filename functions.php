@@ -205,3 +205,8 @@ function mochin_add_og_meta_tags() {
     echo "<!-- End Open Graph Meta Tags -->\n\n";
 }
 add_action('wp_head', 'mochin_add_og_meta_tags');
+
+/**
+ * Include Anti-Robot Check functionality
+ */
+require_once get_template_directory() . '/inc/anti-robot-check.php';
