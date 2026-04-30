@@ -430,3 +430,52 @@ a {
     }
 }
 
+/* Screenshot Controls */
+.mochin-screenshot-controls {
+    margin: 20px 0;
+    padding: 15px;
+    background: #f9fafb;
+    border: 1px solid #e5e7eb;
+    border-radius: 8px;
+    transition: all 0.2s ease;
+}
+
+.dark .mochin-screenshot-controls {
+    background: #1f2937;
+    border-color: #374151;
+}
+
+#mochin-generate-screenshot {
+    background: #111827;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 6px;
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background 0.2s ease;
+}
+
+#mochin-generate-screenshot:hover {
+    background: #374151;
+}
+
+#mochin-generate-screenshot:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+}
+
+.dark #mochin-generate-screenshot {
+    background: #f9fafb;
+    color: #111827;
+}
+
+.dark #mochin-generate-screenshot:hover {
+    background: #e5e7eb;
+}
+
+#mochin-screenshot-status {
+    font-size: 14px;
+    font-weight: 500;
+}
