@@ -78,10 +78,14 @@ function mochin_validate_robot_check($commentdata) {
         
         if (empty($submitted) || $submitted !== $expected) {
             // Store error in session
-            $_SESSION['mochin_robot_error'] = __('Anti-Robot Check failed. Please enter the correct value shown above.', 'mochin-theme');
+            $_SESSION['mochin_robot_error'] = 'Anti-Robot Check failed. Please enter the correct value shown above.';
+            
+            // Force session save
+            session_write_close();
+            session_start();
             
             // Redirect back to post with error
-            wp_redirect(get_permalink($post_id) . '#respond');
+            wp_safe_redirect(get_permalink($post_id) . '#respond');
             exit;
         }
         
